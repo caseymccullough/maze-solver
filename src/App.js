@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import Stack from './Stack.js'
+import Maze from './Maze.js'
 
 function App() {
+
+  let stack = new Stack();
+  let maze = new Maze();
+
+  console.log (stack.isEmpty());
+  stack.push("Adam");
+  stack.push("Bill");
+  console.log(stack.isEmpty());
+  console.log (stack.items.length);
+  console.log (stack.toString());
+
+  console.log (Maze.TRIED);
+  console.log (Maze.PATH);
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Maze Solver</h1>
     </div>
   );
 }
